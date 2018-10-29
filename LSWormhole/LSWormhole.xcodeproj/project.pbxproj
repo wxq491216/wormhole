@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9122E945215C7220003E918B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9122E944215C7220003E918B /* CFNetwork.framework */; };
+		9122E947215C7231003E918B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9122E946215C7231003E918B /* Security.framework */; };
+		9122E949215C7266003E918B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9122E948215C7266003E918B /* UIKit.framework */; };
+		9132423421592FD800DE4A04 /* LSDeviceServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9132423321592FD800DE4A04 /* LSDeviceServer.m */; };
+		9132423921593DFC00DE4A04 /* LSDataFlowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9132423821593DFC00DE4A04 /* LSDataFlowManager.m */; };
+		913643F2216A4BDC00BB17D0 /* LSCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 913643F1216A4BDC00BB17D0 /* LSCommand.m */; };
+		913643F5216A4DEA00BB17D0 /* LSOpenAppCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 913643F3216A4DEA00BB17D0 /* LSOpenAppCommand.m */; };
+		913643F8216A57A000BB17D0 /* LSCommandFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 913643F7216A57A000BB17D0 /* LSCommandFactory.m */; };
+		913806FD2150DB14007AD12C /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 913806FC2150DB14007AD12C /* main.mm */; };
+		913807082150DF09007AD12C /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 913807042150DF09007AD12C /* GCDAsyncUdpSocket.m */; };
+		913807092150DF09007AD12C /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 913807052150DF09007AD12C /* GCDAsyncSocket.m */; };
+		9138070D2150E048007AD12C /* LSDeviceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138070C2150E048007AD12C /* LSDeviceClient.m */; };
+		91C36555215A7C0D007E0EC0 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C36554215A7C0D007E0EC0 /* CoreFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9122E944215C7220003E918B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9122E946215C7231003E918B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9122E948215C7266003E918B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9122E94C215C7594003E918B /* com.xqwang.wormholed.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = com.xqwang.wormholed.plist; sourceTree = "<group>"; };
+		9132423221592FD800DE4A04 /* LSDeviceServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSDeviceServer.h; sourceTree = "<group>"; };
+		9132423321592FD800DE4A04 /* LSDeviceServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSDeviceServer.m; sourceTree = "<group>"; };
+		9132423621593C4700DE4A04 /* LSSocketHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSSocketHeader.h; sourceTree = "<group>"; };
+		9132423721593DFC00DE4A04 /* LSDataFlowManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSDataFlowManager.h; sourceTree = "<group>"; };
+		9132423821593DFC00DE4A04 /* LSDataFlowManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSDataFlowManager.m; sourceTree = "<group>"; };
+		913643F0216A4BDC00BB17D0 /* LSCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCommand.h; sourceTree = "<group>"; };
+		913643F1216A4BDC00BB17D0 /* LSCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSCommand.m; sourceTree = "<group>"; };
+		913643F3216A4DEA00BB17D0 /* LSOpenAppCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSOpenAppCommand.m; sourceTree = "<group>"; };
+		913643F4216A4DEA00BB17D0 /* LSOpenAppCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSOpenAppCommand.h; sourceTree = "<group>"; };
+		913643F6216A57A000BB17D0 /* LSCommandFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCommandFactory.h; sourceTree = "<group>"; };
+		913643F7216A57A000BB17D0 /* LSCommandFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCommandFactory.m; sourceTree = "<group>"; };
+		913806F82150DB14007AD12C /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		913806FB2150DB14007AD12C /* 0xdeadfa11 */ = {isa = PBXFileReference; lastKnownFileType = text; name = 0xdeadfa11; path = Package/usr/bin/0xdeadfa11; sourceTree = "<group>"; };
+		913806FC2150DB14007AD12C /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		913807042150DF09007AD12C /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		913807052150DF09007AD12C /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		913807062150DF09007AD12C /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		913807072150DF09007AD12C /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		9138070A2150DF65007AD12C /* CocoaAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaAsyncSocket.h; sourceTree = "<group>"; };
+		9138070B2150E048007AD12C /* LSDeviceClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSDeviceClient.h; sourceTree = "<group>"; };
+		9138070C2150E048007AD12C /* LSDeviceClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSDeviceClient.m; sourceTree = "<group>"; };
+		91C36554215A7C0D007E0EC0 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		913806F22150DB14007AD12C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9122E949215C7266003E918B /* UIKit.framework in Frameworks */,
+				9122E947215C7231003E918B /* Security.framework in Frameworks */,
+				9122E945215C7220003E918B /* CFNetwork.framework in Frameworks */,
+				91C36555215A7C0D007E0EC0 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9122E94A215C7594003E918B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				9122E94B215C7594003E918B /* LaunchDaemons */,
+			);
+			name = Library;
+			path = Package/Library;
+			sourceTree = "<group>";
+		};
+		9122E94B215C7594003E918B /* LaunchDaemons */ = {
+			isa = PBXGroup;
+			children = (
+				9122E94C215C7594003E918B /* com.xqwang.wormholed.plist */,
+			);
+			path = LaunchDaemons;
+			sourceTree = "<group>";
+		};
+		913242302157E29700DE4A04 /* command */ = {
+			isa = PBXGroup;
+			children = (
+				913643F6216A57A000BB17D0 /* LSCommandFactory.h */,
+				913643F7216A57A000BB17D0 /* LSCommandFactory.m */,
+				913643F4216A4DEA00BB17D0 /* LSOpenAppCommand.h */,
+				913643F3216A4DEA00BB17D0 /* LSOpenAppCommand.m */,
+				913643F0216A4BDC00BB17D0 /* LSCommand.h */,
+				913643F1216A4BDC00BB17D0 /* LSCommand.m */,
+			);
+			path = command;
+			sourceTree = "<group>";
+		};
+		91324241215A1E1500DE4A04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		913806EC2150DB14007AD12C = {
+			isa = PBXGroup;
+			children = (
+				913806F52150DB14007AD12C /* LSWormhole */,
+				91324241215A1E1500DE4A04 /* Products */,
+				91C36553215A7C0D007E0EC0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		913806F52150DB14007AD12C /* LSWormhole */ = {
+			isa = PBXGroup;
+			children = (
+				913242302157E29700DE4A04 /* command */,
+				9132423721593DFC00DE4A04 /* LSDataFlowManager.h */,
+				9132423821593DFC00DE4A04 /* LSDataFlowManager.m */,
+				9138070B2150E048007AD12C /* LSDeviceClient.h */,
+				9138070C2150E048007AD12C /* LSDeviceClient.m */,
+				9132423221592FD800DE4A04 /* LSDeviceServer.h */,
+				9132423321592FD800DE4A04 /* LSDeviceServer.m */,
+				9132423621593C4700DE4A04 /* LSSocketHeader.h */,
+				913806FC2150DB14007AD12C /* main.mm */,
+				913806F62150DB14007AD12C /* Package */,
+				913807032150DF09007AD12C /* socket */,
+			);
+			path = LSWormhole;
+			sourceTree = "<group>";
+		};
+		913806F62150DB14007AD12C /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				9122E94A215C7594003E918B /* Library */,
+				913806F72150DB14007AD12C /* DEBIAN */,
+				913806F92150DB14007AD12C /* usr */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		913806F72150DB14007AD12C /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				913806F82150DB14007AD12C /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		913806F92150DB14007AD12C /* usr */ = {
+			isa = PBXGroup;
+			children = (
+				913806FA2150DB14007AD12C /* bin */,
+			);
+			name = usr;
+			sourceTree = "<group>";
+		};
+		913806FA2150DB14007AD12C /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				913806FB2150DB14007AD12C /* 0xdeadfa11 */,
+			);
+			name = bin;
+			sourceTree = "<group>";
+		};
+		913807032150DF09007AD12C /* socket */ = {
+			isa = PBXGroup;
+			children = (
+				9138070A2150DF65007AD12C /* CocoaAsyncSocket.h */,
+				913807042150DF09007AD12C /* GCDAsyncUdpSocket.m */,
+				913807052150DF09007AD12C /* GCDAsyncSocket.m */,
+				913807062150DF09007AD12C /* GCDAsyncUdpSocket.h */,
+				913807072150DF09007AD12C /* GCDAsyncSocket.h */,
+			);
+			path = socket;
+			sourceTree = "<group>";
+		};
+		91C36553215A7C0D007E0EC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9122E948215C7266003E918B /* UIKit.framework */,
+				9122E946215C7231003E918B /* Security.framework */,
+				9122E944215C7220003E918B /* CFNetwork.framework */,
+				91C36554215A7C0D007E0EC0 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		913806F42150DB14007AD12C /* LSWormhole */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 913807002150DB14007AD12C /* Build configuration list for PBXNativeTarget "LSWormhole" */;
+			buildPhases = (
+				913806F12150DB14007AD12C /* Sources */,
+				913806F22150DB14007AD12C /* Frameworks */,
+				913806F32150DB14007AD12C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LSWormhole;
+			productName = LSWormhole;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		913806ED2150DB14007AD12C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				TargetAttributes = {
+					913806F42150DB14007AD12C = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 913806F02150DB14007AD12C /* Build configuration list for PBXProject "LSWormhole" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 913806EC2150DB14007AD12C;
+			productRefGroup = 91324241215A1E1500DE4A04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				913806F42150DB14007AD12C /* LSWormhole */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		913806F32150DB14007AD12C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		913806F12150DB14007AD12C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9132423921593DFC00DE4A04 /* LSDataFlowManager.m in Sources */,
+				913643F8216A57A000BB17D0 /* LSCommandFactory.m in Sources */,
+				9132423421592FD800DE4A04 /* LSDeviceServer.m in Sources */,
+				913807092150DF09007AD12C /* GCDAsyncSocket.m in Sources */,
+				9138070D2150E048007AD12C /* LSDeviceClient.m in Sources */,
+				913807082150DF09007AD12C /* GCDAsyncUdpSocket.m in Sources */,
+				913806FD2150DB14007AD12C /* main.mm in Sources */,
+				913643F5216A4DEA00BB17D0 /* LSOpenAppCommand.m in Sources */,
+				913643F2216A4BDC00BB17D0 /* LSCommand.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		913806FE2150DB14007AD12C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(MonkeyDevPath)/frameworks/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = "-DTHEOS_INSTANCE_NAME=\"\\\"LSWormhole\\\"\"";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		913806FF2150DB14007AD12C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(MonkeyDevPath)/frameworks/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = "-DTHEOS_INSTANCE_NAME=\"\\\"LSWormhole\\\"\"";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		913807012150DB14007AD12C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JH934ZR2EA;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				INSTALL_PATH = /usr/bin;
+				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevClearUiCacheOnInstall = NO;
+				MonkeyDevCopyOnBuild = NO;
+				MonkeyDevDeviceIP = 10.1.6.37;
+				MonkeyDevDevicePassword = "";
+				MonkeyDevDevicePort = "";
+				MonkeyDevInstallOnAnyBuild = YES;
+				MonkeyDevInstallOnProfiling = YES;
+				MonkeyDevTheosPath = /Users/xqwang/theos/;
+				MonkeyDevkillProcessOnInstall = "";
+				PRODUCT_NAME = wormhole;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		913807022150DB14007AD12C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JH934ZR2EA;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				INSTALL_PATH = /usr/bin;
+				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevClearUiCacheOnInstall = NO;
+				MonkeyDevCopyOnBuild = NO;
+				MonkeyDevDeviceIP = 10.1.6.37;
+				MonkeyDevDevicePassword = "";
+				MonkeyDevDevicePort = "";
+				MonkeyDevInstallOnAnyBuild = YES;
+				MonkeyDevInstallOnProfiling = YES;
+				MonkeyDevTheosPath = /Users/xqwang/theos/;
+				MonkeyDevkillProcessOnInstall = "";
+				PRODUCT_NAME = wormhole;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		913806F02150DB14007AD12C /* Build configuration list for PBXProject "LSWormhole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				913806FE2150DB14007AD12C /* Release */,
+				913806FF2150DB14007AD12C /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		913807002150DB14007AD12C /* Build configuration list for PBXNativeTarget "LSWormhole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				913807012150DB14007AD12C /* Release */,
+				913807022150DB14007AD12C /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 913806ED2150DB14007AD12C /* Project object */;
+}

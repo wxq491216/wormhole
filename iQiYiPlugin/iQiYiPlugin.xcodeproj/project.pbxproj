@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		91364403216DD1CA00BB17D0 /* QYPluginPlayerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 91364401216DD1CA00BB17D0 /* QYPluginPlayerManager.h */; };
+		91364404216DD1CA00BB17D0 /* QYPluginPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91364402216DD1CA00BB17D0 /* QYPluginPlayerManager.m */; };
+		91364406216DD30C00BB17D0 /* PumaPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 91364405216DD30B00BB17D0 /* PumaPlayerViewController.h */; };
+		91897D3C2160AC81004DE9FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91897D3B2160AC81004DE9FF /* UIKit.framework */; };
+		91897D3E2160AC81004DE9FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91897D3D2160AC81004DE9FF /* Foundation.framework */; };
+		91897D402160AC81004DE9FF /* CydiaSubstrate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91897D3F2160AC81004DE9FF /* CydiaSubstrate.framework */; };
+		91897D492160AC81004DE9FF /* iQiYiPlugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 91897D482160AC81004DE9FF /* iQiYiPlugin.mm */; };
+		919B5489217437E400D69778 /* IOSMctoPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 919B5488217437E400D69778 /* IOSMctoPlayer.h */; };
+		919B548B217479F700D69778 /* PlayerDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 919B548A217479F700D69778 /* PlayerDataItem.h */; };
+		919B548D21747B5F00D69778 /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 919B548C21747B5F00D69778 /* AppDelegate.h */; };
+		919B54F12175985100D69778 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 919B54EA2175985100D69778 /* GCDAsyncUdpSocket.m */; };
+		919B54F22175985100D69778 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 919B54EB2175985100D69778 /* GCDAsyncSocket.m */; };
+		919B54F32175985100D69778 /* LSNetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 919B54EC2175985100D69778 /* LSNetworkManager.h */; };
+		919B54F42175985100D69778 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 919B54ED2175985100D69778 /* GCDAsyncUdpSocket.h */; };
+		919B54F52175985100D69778 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 919B54EE2175985100D69778 /* GCDAsyncSocket.h */; };
+		919B54F62175985100D69778 /* CocoaAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 919B54EF2175985100D69778 /* CocoaAsyncSocket.h */; };
+		919B54F72175985100D69778 /* LSNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 919B54F02175985100D69778 /* LSNetworkManager.m */; };
+		919B54F9217598F900D69778 /* LSNetworkPrefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 919B54F8217598F900D69778 /* LSNetworkPrefix.h */; };
+		919B54FC2175998E00D69778 /* LSDoTaskCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 919B54FA2175998E00D69778 /* LSDoTaskCommand.h */; };
+		919B54FD2175998E00D69778 /* LSDoTaskCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 919B54FB2175998E00D69778 /* LSDoTaskCommand.m */; };
+		919B54FF2175BAAB00D69778 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919B54FE2175BAAB00D69778 /* CFNetwork.framework */; };
+		919B55012175BAC200D69778 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919B55002175BAC200D69778 /* PushKit.framework */; };
+		919B55032175BAD000D69778 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919B55022175BAD000D69778 /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		91364401216DD1CA00BB17D0 /* QYPluginPlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYPluginPlayerManager.h; sourceTree = "<group>"; };
+		91364402216DD1CA00BB17D0 /* QYPluginPlayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYPluginPlayerManager.m; sourceTree = "<group>"; };
+		91364405216DD30B00BB17D0 /* PumaPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PumaPlayerViewController.h; sourceTree = "<group>"; };
+		91897D382160AC81004DE9FF /* iQiYiPlugin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = iQiYiPlugin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		91897D3B2160AC81004DE9FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		91897D3D2160AC81004DE9FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		91897D3F2160AC81004DE9FF /* CydiaSubstrate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CydiaSubstrate.framework; path = Library/Frameworks/CydiaSubstrate.framework; sourceTree = DEVELOPER_DIR; };
+		91897D442160AC81004DE9FF /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		91897D462160AC81004DE9FF /* iQiYiPlugin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iQiYiPlugin-Prefix.pch"; sourceTree = "<group>"; };
+		91897D472160AC81004DE9FF /* iQiYiPlugin.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = iQiYiPlugin.xm; sourceTree = "<group>"; };
+		91897D482160AC81004DE9FF /* iQiYiPlugin.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = iQiYiPlugin.mm; sourceTree = "<group>"; };
+		91897D4D2160AC81004DE9FF /* iQiYiPlugin.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = iQiYiPlugin.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/iQiYiPlugin.plist; sourceTree = "<group>"; };
+		919B5488217437E400D69778 /* IOSMctoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSMctoPlayer.h; sourceTree = "<group>"; };
+		919B548A217479F700D69778 /* PlayerDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerDataItem.h; sourceTree = "<group>"; };
+		919B548C21747B5F00D69778 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		919B54EA2175985100D69778 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		919B54EB2175985100D69778 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		919B54EC2175985100D69778 /* LSNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSNetworkManager.h; sourceTree = "<group>"; };
+		919B54ED2175985100D69778 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		919B54EE2175985100D69778 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		919B54EF2175985100D69778 /* CocoaAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaAsyncSocket.h; sourceTree = "<group>"; };
+		919B54F02175985100D69778 /* LSNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSNetworkManager.m; sourceTree = "<group>"; };
+		919B54F8217598F900D69778 /* LSNetworkPrefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSNetworkPrefix.h; sourceTree = "<group>"; };
+		919B54FA2175998E00D69778 /* LSDoTaskCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSDoTaskCommand.h; sourceTree = "<group>"; };
+		919B54FB2175998E00D69778 /* LSDoTaskCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSDoTaskCommand.m; sourceTree = "<group>"; };
+		919B54FE2175BAAB00D69778 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		919B55002175BAC200D69778 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		919B55022175BAD000D69778 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91897D342160AC81004DE9FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				919B55032175BAD000D69778 /* Security.framework in Frameworks */,
+				919B55012175BAC200D69778 /* PushKit.framework in Frameworks */,
+				919B54FF2175BAAB00D69778 /* CFNetwork.framework in Frameworks */,
+				91897D3C2160AC81004DE9FF /* UIKit.framework in Frameworks */,
+				91897D3E2160AC81004DE9FF /* Foundation.framework in Frameworks */,
+				91897D402160AC81004DE9FF /* CydiaSubstrate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91897D2D2160AC81004DE9FF = {
+			isa = PBXGroup;
+			children = (
+				91897D412160AC81004DE9FF /* iQiYiPlugin */,
+				91897D3A2160AC81004DE9FF /* Frameworks */,
+				91897D392160AC81004DE9FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		91897D392160AC81004DE9FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91897D382160AC81004DE9FF /* iQiYiPlugin.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91897D3A2160AC81004DE9FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				919B55022175BAD000D69778 /* Security.framework */,
+				919B55002175BAC200D69778 /* PushKit.framework */,
+				919B54FE2175BAAB00D69778 /* CFNetwork.framework */,
+				91897D3B2160AC81004DE9FF /* UIKit.framework */,
+				91897D3D2160AC81004DE9FF /* Foundation.framework */,
+				91897D3F2160AC81004DE9FF /* CydiaSubstrate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91897D412160AC81004DE9FF /* iQiYiPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				919B54E92175985100D69778 /* socket */,
+				919B548C21747B5F00D69778 /* AppDelegate.h */,
+				919B548A217479F700D69778 /* PlayerDataItem.h */,
+				919B5488217437E400D69778 /* IOSMctoPlayer.h */,
+				91364405216DD30B00BB17D0 /* PumaPlayerViewController.h */,
+				91364401216DD1CA00BB17D0 /* QYPluginPlayerManager.h */,
+				91364402216DD1CA00BB17D0 /* QYPluginPlayerManager.m */,
+				91897D472160AC81004DE9FF /* iQiYiPlugin.xm */,
+				91897D482160AC81004DE9FF /* iQiYiPlugin.mm */,
+				91897D422160AC81004DE9FF /* Package */,
+				91897D452160AC81004DE9FF /* Supporting Files */,
+			);
+			path = iQiYiPlugin;
+			sourceTree = "<group>";
+		};
+		91897D422160AC81004DE9FF /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				91897D432160AC81004DE9FF /* DEBIAN */,
+				91897D4A2160AC81004DE9FF /* Library */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		91897D432160AC81004DE9FF /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				91897D442160AC81004DE9FF /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		91897D452160AC81004DE9FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				91897D462160AC81004DE9FF /* iQiYiPlugin-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		91897D4A2160AC81004DE9FF /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				91897D4B2160AC81004DE9FF /* MobileSubstrate */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		91897D4B2160AC81004DE9FF /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				91897D4C2160AC81004DE9FF /* DynamicLibraries */,
+			);
+			name = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		91897D4C2160AC81004DE9FF /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				91897D4D2160AC81004DE9FF /* iQiYiPlugin.plist */,
+			);
+			name = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+		919B54E92175985100D69778 /* socket */ = {
+			isa = PBXGroup;
+			children = (
+				919B54EF2175985100D69778 /* CocoaAsyncSocket.h */,
+				919B54EE2175985100D69778 /* GCDAsyncSocket.h */,
+				919B54EB2175985100D69778 /* GCDAsyncSocket.m */,
+				919B54ED2175985100D69778 /* GCDAsyncUdpSocket.h */,
+				919B54EA2175985100D69778 /* GCDAsyncUdpSocket.m */,
+				919B54FA2175998E00D69778 /* LSDoTaskCommand.h */,
+				919B54FB2175998E00D69778 /* LSDoTaskCommand.m */,
+				919B54EC2175985100D69778 /* LSNetworkManager.h */,
+				919B54F02175985100D69778 /* LSNetworkManager.m */,
+				919B54F8217598F900D69778 /* LSNetworkPrefix.h */,
+			);
+			path = socket;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		91897D352160AC81004DE9FF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				919B548B217479F700D69778 /* PlayerDataItem.h in Headers */,
+				91364403216DD1CA00BB17D0 /* QYPluginPlayerManager.h in Headers */,
+				919B54FC2175998E00D69778 /* LSDoTaskCommand.h in Headers */,
+				919B54F62175985100D69778 /* CocoaAsyncSocket.h in Headers */,
+				91364406216DD30C00BB17D0 /* PumaPlayerViewController.h in Headers */,
+				919B54F52175985100D69778 /* GCDAsyncSocket.h in Headers */,
+				919B54F42175985100D69778 /* GCDAsyncUdpSocket.h in Headers */,
+				919B5489217437E400D69778 /* IOSMctoPlayer.h in Headers */,
+				919B54F32175985100D69778 /* LSNetworkManager.h in Headers */,
+				919B54F9217598F900D69778 /* LSNetworkPrefix.h in Headers */,
+				919B548D21747B5F00D69778 /* AppDelegate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		91897D372160AC81004DE9FF /* iQiYiPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91897D502160AC81004DE9FF /* Build configuration list for PBXNativeTarget "iQiYiPlugin" */;
+			buildPhases = (
+				91897D322160AC81004DE9FF /* ShellScript */,
+				91897D332160AC81004DE9FF /* Sources */,
+				91897D342160AC81004DE9FF /* Frameworks */,
+				91897D352160AC81004DE9FF /* Headers */,
+				91897D362160AC81004DE9FF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iQiYiPlugin;
+			productName = iQiYiPlugin;
+			productReference = 91897D382160AC81004DE9FF /* iQiYiPlugin.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91897D2E2160AC81004DE9FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				TargetAttributes = {
+					91897D372160AC81004DE9FF = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 91897D312160AC81004DE9FF /* Build configuration list for PBXProject "iQiYiPlugin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 91897D2D2160AC81004DE9FF;
+			productRefGroup = 91897D392160AC81004DE9FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91897D372160AC81004DE9FF /* iQiYiPlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91897D322160AC81004DE9FF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos";
+		};
+		91897D362160AC81004DE9FF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91897D332160AC81004DE9FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				919B54F22175985100D69778 /* GCDAsyncSocket.m in Sources */,
+				91897D492160AC81004DE9FF /* iQiYiPlugin.mm in Sources */,
+				919B54FD2175998E00D69778 /* LSDoTaskCommand.m in Sources */,
+				919B54F12175985100D69778 /* GCDAsyncUdpSocket.m in Sources */,
+				919B54F72175985100D69778 /* LSNetworkManager.m in Sources */,
+				91364404216DD1CA00BB17D0 /* QYPluginPlayerManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		91897D4E2160AC81004DE9FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(MonkeyDevPath)/frameworks/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = "-DTHEOS_INSTANCE_NAME=\"\\\"iQiYiPlugin\\\"\"";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91897D4F2160AC81004DE9FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(MonkeyDevPath)/frameworks/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DTHEOS_INSTANCE_NAME=\"\\\"iQiYiPlugin\\\"\"";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		91897D512160AC81004DE9FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NWJ2H2T9QA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iQiYiPlugin/iQiYiPlugin-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevClearUiCacheOnInstall = NO;
+				MonkeyDevCopyOnBuild = NO;
+				MonkeyDevDeviceIP = 10.1.6.37;
+				MonkeyDevDevicePassword = "";
+				MonkeyDevDevicePort = "";
+				MonkeyDevInstallOnAnyBuild = YES;
+				MonkeyDevInstallOnProfiling = YES;
+				MonkeyDevPath = /opt/MonkeyDev/;
+				MonkeyDevTheosPath = /Users/xqwang/theos;
+				MonkeyDevkillProcessOnInstall = SpringBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		91897D522160AC81004DE9FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NWJ2H2T9QA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iQiYiPlugin/iQiYiPlugin-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevClearUiCacheOnInstall = NO;
+				MonkeyDevCopyOnBuild = NO;
+				MonkeyDevDeviceIP = 10.1.6.37;
+				MonkeyDevDevicePassword = "";
+				MonkeyDevDevicePort = "";
+				MonkeyDevInstallOnAnyBuild = YES;
+				MonkeyDevInstallOnProfiling = YES;
+				MonkeyDevPath = /opt/MonkeyDev/;
+				MonkeyDevTheosPath = /Users/xqwang/theos;
+				MonkeyDevkillProcessOnInstall = SpringBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91897D312160AC81004DE9FF /* Build configuration list for PBXProject "iQiYiPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91897D4E2160AC81004DE9FF /* Release */,
+				91897D4F2160AC81004DE9FF /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91897D502160AC81004DE9FF /* Build configuration list for PBXNativeTarget "iQiYiPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91897D512160AC81004DE9FF /* Release */,
+				91897D522160AC81004DE9FF /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91897D2E2160AC81004DE9FF /* Project object */;
+}

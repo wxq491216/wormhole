@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/wormhole</string>
+		<string>processor-demo</string>
+		<string>com.qiyi.iphone</string>
+	</array>
+	<key>Sockets</key>
+	<dict>
+		<key>Listeners</key>
+		<dict>
+			<key>SockServiceName</key>
+			<string>55</string>
+		</dict>
+	</dict>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>Label</key>
+	<string>com.xqwang.wormholed</string>
+	<key>KeepAlive</key>
+	<true/>
+</dict>
+</plist>
