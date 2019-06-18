@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		914EC9E2228C16940075C052 /* AwemeAutoSign.h in Headers */ = {isa = PBXBuildFile; fileRef = 914EC9E0228C16940075C052 /* AwemeAutoSign.h */; };
+		914EC9E3228C16940075C052 /* AwemeAutoSign.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EC9E1228C16940075C052 /* AwemeAutoSign.m */; };
+		914EC9E5228C17C60075C052 /* IESAntiSpam.h in Headers */ = {isa = PBXBuildFile; fileRef = 914EC9E4228C17C60075C052 /* IESAntiSpam.h */; };
+		91C36565215A8473007E0EC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C36564215A8473007E0EC0 /* UIKit.framework */; };
+		91C36567215A8473007E0EC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C36566215A8473007E0EC0 /* Foundation.framework */; };
+		91C36569215A8473007E0EC0 /* CydiaSubstrate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C36568215A8473007E0EC0 /* CydiaSubstrate.framework */; };
+		91C36572215A8473007E0EC0 /* AwemePlugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 91C36571215A8473007E0EC0 /* AwemePlugin.mm */; };
+		91C36582215A84D8007E0EC0 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C3657D215A84D8007E0EC0 /* GCDAsyncUdpSocket.m */; };
+		91C36583215A84D8007E0EC0 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C3657E215A84D8007E0EC0 /* GCDAsyncSocket.m */; };
+		91C36584215A84D8007E0EC0 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 91C3657F215A84D8007E0EC0 /* GCDAsyncUdpSocket.h */; };
+		91C36585215A84D8007E0EC0 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 91C36580215A84D8007E0EC0 /* GCDAsyncSocket.h */; };
+		91C36586215A84D8007E0EC0 /* CocoaAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 91C36581215A84D8007E0EC0 /* CocoaAsyncSocket.h */; };
+		91C36589215A8664007E0EC0 /* LSNetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 91C36587215A8664007E0EC0 /* LSNetworkManager.h */; };
+		91C3658A215A8664007E0EC0 /* LSNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C36588215A8664007E0EC0 /* LSNetworkManager.m */; };
+		91C3658C215A884E007E0EC0 /* LSNetworkPrefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 91C3658B215A884E007E0EC0 /* LSNetworkPrefix.h */; };
+		91C3658F215A8992007E0EC0 /* LSDoTaskCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C3658D215A8992007E0EC0 /* LSDoTaskCommand.m */; };
+		91C36590215A8992007E0EC0 /* LSDoTaskCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 91C3658E215A8992007E0EC0 /* LSDoTaskCommand.h */; };
+		91C36592215A8D2A007E0EC0 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C36591215A8D2A007E0EC0 /* PushKit.framework */; };
+		91C36594215A8D47007E0EC0 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C36593215A8D47007E0EC0 /* CoreFoundation.framework */; };
+		91C36596215A8D6C007E0EC0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C36595215A8D6C007E0EC0 /* CFNetwork.framework */; };
+		91C36598215A8E20007E0EC0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C36597215A8E20007E0EC0 /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		914EC9E0228C16940075C052 /* AwemeAutoSign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwemeAutoSign.h; sourceTree = "<group>"; };
+		914EC9E1228C16940075C052 /* AwemeAutoSign.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwemeAutoSign.m; sourceTree = "<group>"; };
+		914EC9E4228C17C60075C052 /* IESAntiSpam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IESAntiSpam.h; sourceTree = "<group>"; };
+		91C36561215A8473007E0EC0 /* AwemePlugin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = AwemePlugin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C36564215A8473007E0EC0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		91C36566215A8473007E0EC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		91C36568215A8473007E0EC0 /* CydiaSubstrate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CydiaSubstrate.framework; path = Library/Frameworks/CydiaSubstrate.framework; sourceTree = DEVELOPER_DIR; };
+		91C3656D215A8473007E0EC0 /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		91C3656F215A8473007E0EC0 /* AwemePlugin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AwemePlugin-Prefix.pch"; sourceTree = "<group>"; };
+		91C36570215A8473007E0EC0 /* AwemePlugin.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = AwemePlugin.xm; sourceTree = "<group>"; };
+		91C36571215A8473007E0EC0 /* AwemePlugin.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AwemePlugin.mm; sourceTree = "<group>"; };
+		91C36576215A8473007E0EC0 /* AwemePlugin.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = AwemePlugin.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/AwemePlugin.plist; sourceTree = "<group>"; };
+		91C3657D215A84D8007E0EC0 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		91C3657E215A84D8007E0EC0 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		91C3657F215A84D8007E0EC0 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		91C36580215A84D8007E0EC0 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		91C36581215A84D8007E0EC0 /* CocoaAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaAsyncSocket.h; sourceTree = "<group>"; };
+		91C36587215A8664007E0EC0 /* LSNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSNetworkManager.h; sourceTree = "<group>"; };
+		91C36588215A8664007E0EC0 /* LSNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSNetworkManager.m; sourceTree = "<group>"; };
+		91C3658B215A884E007E0EC0 /* LSNetworkPrefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSNetworkPrefix.h; sourceTree = "<group>"; };
+		91C3658D215A8992007E0EC0 /* LSDoTaskCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSDoTaskCommand.m; sourceTree = "<group>"; };
+		91C3658E215A8992007E0EC0 /* LSDoTaskCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSDoTaskCommand.h; sourceTree = "<group>"; };
+		91C36591215A8D2A007E0EC0 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		91C36593215A8D47007E0EC0 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		91C36595215A8D6C007E0EC0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		91C36597215A8E20007E0EC0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91C3655D215A8473007E0EC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C36598215A8E20007E0EC0 /* Security.framework in Frameworks */,
+				91C36596215A8D6C007E0EC0 /* CFNetwork.framework in Frameworks */,
+				91C36594215A8D47007E0EC0 /* CoreFoundation.framework in Frameworks */,
+				91C36592215A8D2A007E0EC0 /* PushKit.framework in Frameworks */,
+				91C36565215A8473007E0EC0 /* UIKit.framework in Frameworks */,
+				91C36567215A8473007E0EC0 /* Foundation.framework in Frameworks */,
+				91C36569215A8473007E0EC0 /* CydiaSubstrate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91C36556215A8473007E0EC0 = {
+			isa = PBXGroup;
+			children = (
+				91C3656A215A8473007E0EC0 /* AwemePlugin */,
+				91C36563215A8473007E0EC0 /* Frameworks */,
+				91C36562215A8473007E0EC0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		91C36562215A8473007E0EC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91C36561215A8473007E0EC0 /* AwemePlugin.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91C36563215A8473007E0EC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91C36597215A8E20007E0EC0 /* Security.framework */,
+				91C36595215A8D6C007E0EC0 /* CFNetwork.framework */,
+				91C36593215A8D47007E0EC0 /* CoreFoundation.framework */,
+				91C36591215A8D2A007E0EC0 /* PushKit.framework */,
+				91C36564215A8473007E0EC0 /* UIKit.framework */,
+				91C36566215A8473007E0EC0 /* Foundation.framework */,
+				91C36568215A8473007E0EC0 /* CydiaSubstrate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91C3656A215A8473007E0EC0 /* AwemePlugin */ = {
+			isa = PBXGroup;
+			children = (
+				914EC9E4228C17C60075C052 /* IESAntiSpam.h */,
+				91C3658E215A8992007E0EC0 /* LSDoTaskCommand.h */,
+				91C3658D215A8992007E0EC0 /* LSDoTaskCommand.m */,
+				91C3658B215A884E007E0EC0 /* LSNetworkPrefix.h */,
+				91C36587215A8664007E0EC0 /* LSNetworkManager.h */,
+				91C36588215A8664007E0EC0 /* LSNetworkManager.m */,
+				91C3657C215A84D8007E0EC0 /* socket */,
+				91C36570215A8473007E0EC0 /* AwemePlugin.xm */,
+				91C36571215A8473007E0EC0 /* AwemePlugin.mm */,
+				91C3656B215A8473007E0EC0 /* Package */,
+				91C3656E215A8473007E0EC0 /* Supporting Files */,
+				914EC9E0228C16940075C052 /* AwemeAutoSign.h */,
+				914EC9E1228C16940075C052 /* AwemeAutoSign.m */,
+			);
+			path = AwemePlugin;
+			sourceTree = "<group>";
+		};
+		91C3656B215A8473007E0EC0 /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				91C3656C215A8473007E0EC0 /* DEBIAN */,
+				91C36573215A8473007E0EC0 /* Library */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		91C3656C215A8473007E0EC0 /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				91C3656D215A8473007E0EC0 /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		91C3656E215A8473007E0EC0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				91C3656F215A8473007E0EC0 /* AwemePlugin-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		91C36573215A8473007E0EC0 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				91C36574215A8473007E0EC0 /* MobileSubstrate */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		91C36574215A8473007E0EC0 /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				91C36575215A8473007E0EC0 /* DynamicLibraries */,
+			);
+			name = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		91C36575215A8473007E0EC0 /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				91C36576215A8473007E0EC0 /* AwemePlugin.plist */,
+			);
+			name = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+		91C3657C215A84D8007E0EC0 /* socket */ = {
+			isa = PBXGroup;
+			children = (
+				91C3657D215A84D8007E0EC0 /* GCDAsyncUdpSocket.m */,
+				91C3657E215A84D8007E0EC0 /* GCDAsyncSocket.m */,
+				91C3657F215A84D8007E0EC0 /* GCDAsyncUdpSocket.h */,
+				91C36580215A84D8007E0EC0 /* GCDAsyncSocket.h */,
+				91C36581215A84D8007E0EC0 /* CocoaAsyncSocket.h */,
+			);
+			path = socket;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		91C3655E215A8473007E0EC0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C36589215A8664007E0EC0 /* LSNetworkManager.h in Headers */,
+				914EC9E5228C17C60075C052 /* IESAntiSpam.h in Headers */,
+				91C36584215A84D8007E0EC0 /* GCDAsyncUdpSocket.h in Headers */,
+				91C3658C215A884E007E0EC0 /* LSNetworkPrefix.h in Headers */,
+				91C36585215A84D8007E0EC0 /* GCDAsyncSocket.h in Headers */,
+				914EC9E2228C16940075C052 /* AwemeAutoSign.h in Headers */,
+				91C36586215A84D8007E0EC0 /* CocoaAsyncSocket.h in Headers */,
+				91C36590215A8992007E0EC0 /* LSDoTaskCommand.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		91C36560215A8473007E0EC0 /* AwemePlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91C36579215A8473007E0EC0 /* Build configuration list for PBXNativeTarget "AwemePlugin" */;
+			buildPhases = (
+				91C3655B215A8473007E0EC0 /* ShellScript */,
+				91C3655C215A8473007E0EC0 /* Sources */,
+				91C3655D215A8473007E0EC0 /* Frameworks */,
+				91C3655E215A8473007E0EC0 /* Headers */,
+				91C3655F215A8473007E0EC0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AwemePlugin;
+			productName = AwemePlugin;
+			productReference = 91C36561215A8473007E0EC0 /* AwemePlugin.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91C36557215A8473007E0EC0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				TargetAttributes = {
+					91C36560215A8473007E0EC0 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 91C3655A215A8473007E0EC0 /* Build configuration list for PBXProject "AwemePlugin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 91C36556215A8473007E0EC0;
+			productRefGroup = 91C36562215A8473007E0EC0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91C36560215A8473007E0EC0 /* AwemePlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91C3655B215A8473007E0EC0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos";
+		};
+		91C3655F215A8473007E0EC0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91C3655C215A8473007E0EC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C36583215A84D8007E0EC0 /* GCDAsyncSocket.m in Sources */,
+				91C3658F215A8992007E0EC0 /* LSDoTaskCommand.m in Sources */,
+				91C3658A215A8664007E0EC0 /* LSNetworkManager.m in Sources */,
+				91C36582215A84D8007E0EC0 /* GCDAsyncUdpSocket.m in Sources */,
+				91C36572215A8473007E0EC0 /* AwemePlugin.mm in Sources */,
+				914EC9E3228C16940075C052 /* AwemeAutoSign.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		91C36577215A8473007E0EC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(MonkeyDevPath)/frameworks/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = "-DTHEOS_INSTANCE_NAME=\"\\\"AwemePlugin\\\"\"";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91C36578215A8473007E0EC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(MonkeyDevPath)/frameworks/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DTHEOS_INSTANCE_NAME=\"\\\"AwemePlugin\\\"\"";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		91C3657A215A8473007E0EC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AwemePlugin/AwemePlugin-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevClearUiCacheOnInstall = NO;
+				MonkeyDevCopyOnBuild = NO;
+				MonkeyDevDeviceIP = 10.1.6.70;
+				MonkeyDevDevicePassword = alpine;
+				MonkeyDevDevicePort = "";
+				MonkeyDevInstallOnAnyBuild = YES;
+				MonkeyDevInstallOnProfiling = YES;
+				MonkeyDevTheosPath = /Users/xqwang/theos/;
+				MonkeyDevkillProcessOnInstall = SpringBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		91C3657B215A8473007E0EC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AwemePlugin/AwemePlugin-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevClearUiCacheOnInstall = NO;
+				MonkeyDevCopyOnBuild = NO;
+				MonkeyDevDeviceIP = 10.1.6.70;
+				MonkeyDevDevicePassword = alpine;
+				MonkeyDevDevicePort = "";
+				MonkeyDevInstallOnAnyBuild = YES;
+				MonkeyDevInstallOnProfiling = YES;
+				MonkeyDevTheosPath = /Users/xqwang/theos/;
+				MonkeyDevkillProcessOnInstall = SpringBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91C3655A215A8473007E0EC0 /* Build configuration list for PBXProject "AwemePlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91C36577215A8473007E0EC0 /* Release */,
+				91C36578215A8473007E0EC0 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91C36579215A8473007E0EC0 /* Build configuration list for PBXNativeTarget "AwemePlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91C3657A215A8473007E0EC0 /* Release */,
+				91C3657B215A8473007E0EC0 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91C36557215A8473007E0EC0 /* Project object */;
+}
