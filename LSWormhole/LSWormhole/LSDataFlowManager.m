@@ -34,7 +34,7 @@
 -(instancetype)init
 {
     if (self = [super init]) {
-        self.socketServer = [[LSDeviceServer alloc] initWithPort:22346];
+        self.socketServer = [[LSDeviceServer alloc] initWithPort:LOCAL_SERVER_PORT];
         [self.socketServer setDelegate:self];
         self.socketClient = [[LSDeviceClient alloc] init];
         [self.socketClient setDelegate:self];

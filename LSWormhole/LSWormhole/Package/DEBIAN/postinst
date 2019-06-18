@@ -1,0 +1,9 @@
+#!/bin/sh
+
+#  postinst.sh
+#  LSWormhole
+#
+#  Created by xqwang on 2019/5/16.
+#  
+
+chown -R root:wheel /usr/bin/wormhole

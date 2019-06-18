@@ -13,6 +13,7 @@
 #define SERVER_HOST @"xxx.xxx.xxx.xxx"    //公司爱奇艺
 #define SERVER_PORT 22345
 //#define SERVER_PORT 12345
+#define LOCAL_SERVER_PORT 22346
 
 #define PacketHeadSize          12
 

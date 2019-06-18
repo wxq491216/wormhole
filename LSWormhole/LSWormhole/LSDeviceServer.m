@@ -39,7 +39,7 @@
     if (self.serverSocket) {
         NSError* error = nil;
         [self.serverSocket acceptOnPort:self.port error:&error];
-        NSLog(@"wxq LSDeviceServer startServer acceptOnPort");
+        NSLog(@"wxq LSDeviceServer startServer acceptOnPort %d", (int)self.port);
         if (error != nil) {
             NSLog(@"%@", error);
         }
@@ -62,10 +62,8 @@
             if (lenght - start < PacketHeadSize) {
                 break;
             }
+            
             [self.buffer getBytes:&header range:NSMakeRange(start, PacketHeadSize)];
-            header.version = CFSwapInt32BigToHost(header.version);
-            header.type = CFSwapInt32BigToHost(header.type);
-            header.nLen = CFSwapInt32BigToHost(header.nLen);
             bodyLength = header.nLen;
             left = lenght - (start + PacketHeadSize);
             if ((left < bodyLength) && (bodyLength != 0)) {
@@ -73,7 +71,12 @@
             }
             offset = PacketHeadSize + bodyLength;
             if (header.type == ID_NORMAL_PACKAGE) {
-                NSData* data = [self.buffer subdataWithRange:NSMakeRange(start, offset)];
+                //切换大小端
+                header.version = CFSwapInt32HostToBig(header.version);
+                header.type = CFSwapInt32HostToBig(header.type);
+                header.nLen = CFSwapInt32HostToBig(header.nLen);
+                [subData appendBytes:&header length:PacketHeadSize];
+                NSData* data = [self.buffer subdataWithRange:NSMakeRange(start + PacketHeadSize, bodyLength)];
                 [subData appendData:data];
             }
             start += offset;

@@ -62,7 +62,7 @@
 {
     if(self.socket != nil && self.identifyVerify){
         [self.socket writeData:data withTimeout:-1 tag:tag];
-        NSLog(@"wxq 发送到服务端%ld号数据", tag);
+        NSLog(@"wxq 发送%ld号数据到远程服务器", tag);
     }
 }
 
@@ -155,6 +155,12 @@
             NSLog(@"wxq 接收到数据头，version = %d type = %d length = %d", header.version, header.type, header.nLen);
             bodyLength = header.nLen;
             
+            //版本号异常，表示数据读取出现混乱，清空buffer后，重新开始
+            if(header.version > 10 || header.version <= 0){
+                start = lenght;
+                break;
+            }
+            
             left = lenght - (start + PacketHeadSize);
             if ((left < bodyLength) && (bodyLength != 0)) {
                 break;
@@ -163,7 +169,8 @@
             offset = PacketHeadSize + bodyLength;
             NSLog(@"length = %d left = %d start = %d", lenght, left, start);
             if (header.type == ID_NORMAL_PACKAGE) {
-                NSData* data = [self.buffer subdataWithRange:NSMakeRange(start, offset)];
+                [subData appendBytes:&header length:PacketHeadSize];
+                NSData* data = [self.buffer subdataWithRange:NSMakeRange(start + PacketHeadSize, bodyLength)];
                 [subData appendData:data];
             }else if(header.type == ID_RESPONSE_PACKAGE){
                 NSData* data = [self.buffer subdataWithRange:NSMakeRange(start + PacketHeadSize, bodyLength)];
@@ -214,7 +221,7 @@
 
 -(void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
-    NSLog(@"wxq 接收到服务端发送的%ld号数据", tag);
+    NSLog(@"wxq 接收到服务端发送的数据data = %@", data);
     NSData* message = [self handleData:data];
     if (self.delegate && [message length] != 0) {
         if (!self.appOpen) {

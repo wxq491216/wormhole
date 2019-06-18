@@ -14,7 +14,10 @@
 
 @property(nonatomic, assign)id<LSSocketDelegate> delegate;
 
+//设备名称
 @property(nonatomic, strong)NSString* name;
+
+//设备服务的目标应用
 @property(nonatomic, strong)NSString* app;
 @property(nonatomic, assign)BOOL appOpen;
 
