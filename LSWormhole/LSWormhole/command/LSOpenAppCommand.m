@@ -21,7 +21,7 @@
     self.appName = [info valueForKey:@"bundleId"];
 }
 
--(void)runCommand:(RunComplete)block
+-(void)runCommand:(CommandRunComplete)block
 {
     NSLog(@"wxq 执行打开app命令, %@", self.appName);
     BOOL open = NO;

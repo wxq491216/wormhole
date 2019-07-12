@@ -6,8 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-typedef void(^RunComplete)(BOOL succ, NSData* data);
+#import "LSSocketHeader.h"
 
 @interface LSCommand : NSObject
 
@@ -17,6 +16,9 @@ typedef void(^RunComplete)(BOOL succ, NSData* data);
 
 -(void)parserCommandData:(NSDictionary*)info;
 
--(void)runCommand:(RunComplete)block;
+//列举command执行过程中需要处理的response信息，responseName为key、处理类字符串为value，用于向注册中心注册
+-(NSDictionary*)responseInfo;
+
+-(void)runCommand:(CommandRunComplete)block;
 
 @end

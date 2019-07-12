@@ -17,6 +17,9 @@
 
 @property(nonatomic, strong)NSMutableData* buffer;
 
+@property(nonatomic, assign)int tag;
+@property(nonatomic, strong)NSObject* lock;
+
 @end
 
 @implementation LSDeviceServer
@@ -29,6 +32,8 @@
         [self.serverSocket setAutoDisconnectOnClosedReadStream:NO];
         self.port = port;
         self.buffer = [NSMutableData data];
+        self.tag = 0;
+        self.lock = [[NSObject alloc] init];
     }
     return self;
 }
@@ -46,7 +51,7 @@
     }
 }
 
--(NSData*)handleData:(NSData*)data
+-(void)handleData:(NSData*)data
 {
     NSMutableData* subData = [NSMutableData data];
     @synchronized(self){
@@ -70,31 +75,56 @@
                 break;
             }
             offset = PacketHeadSize + bodyLength;
+            NSData* data = [self.buffer subdataWithRange:NSMakeRange(start + PacketHeadSize, bodyLength)];
+            
             if (header.type == ID_NORMAL_PACKAGE) {
                 //切换大小端
                 header.version = CFSwapInt32HostToBig(header.version);
                 header.type = CFSwapInt32HostToBig(header.type);
                 header.nLen = CFSwapInt32HostToBig(header.nLen);
                 [subData appendBytes:&header length:PacketHeadSize];
-                NSData* data = [self.buffer subdataWithRange:NSMakeRange(start + PacketHeadSize, bodyLength)];
                 [subData appendData:data];
+                
+                NSDictionary* info = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                NSString* packageId = [info valueForKey:@"httpCnswhid"];
+                NSLog(@"wxq 接收到应用返回的任务处理数据%@", packageId);
+                
+            }else if(header.type == ID_RESPONSE_PACKAGE){
+                NSLog(@"wxq 接收到应用发送来的反馈包");
+                if (self.delegate && [self.delegate respondsToSelector:@selector(socket:didReceiveResponse:)]) {
+                    [self.delegate socket:self didReceiveResponse:data];
+                }
+            }else if(header.type == ID_HEART_BEAT_PACKAGE){
+                NSLog(@"wxq 接收到应用发送来的心跳包");
+            }else if (header.type == ID_COMMAND_PACKAGE){
+                NSLog(@"wxq 接收到应用发送的命令包");
+                if (self.delegate && [self.delegate respondsToSelector:@selector(socket:didReceiveCommand:)]) {
+                    [self.delegate socket:self didReceiveCommand:data];
+                }
             }
             start += offset;
         }while (YES);
         
         [self.buffer replaceBytesInRange:NSMakeRange(0, start) withBytes:NULL length:0];
     }
-    if ([subData length] == 0) {
-        subData = nil;
+    if ([subData length] > 0) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(socket:didReceiveNormalData:)]) {
+            [self.delegate socket:self didReceiveNormalData:subData];
+        }
     }
-    return subData;
 }
 
--(void)sendData:(NSData*)data tag:(long)tag
+-(void)sendData:(NSData*)data
 {
     if (self.connectSocket) {
-        NSLog(@"wxq 发送%ld号数据到应用", tag);
-        [self.connectSocket writeData:data withTimeout:-1 tag:tag];
+        @synchronized (self.lock) {
+            NSLog(@"wxq 发送%d号数据到应用", self.tag);
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                [self.connectSocket writeData:data withTimeout:-1 tag:self.tag];
+            });
+            self.tag++;
+        }
+        
     }
 }
 
@@ -111,6 +141,9 @@
     if (self.connectSocket == nil) {
         self.connectSocket = newSocket;
         NSLog(@"wxq 新socket连接到当前服务");
+        if (self.delegate && [self.delegate respondsToSelector:@selector(socketDidConnect:)]) {
+            [self.delegate socketDidConnect:self];
+        }
     }else{
         NSLog(@"wxq IOS设备当前仅支持单一客户");
     }
@@ -119,13 +152,8 @@
 
 -(void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
-    NSData* value = [self handleData:data];
-    if (self.delegate && value != nil) {
-        NSLog(@"wxq 接收到数据包");
-        [self.delegate socket:self didReadData:value tag:tag];
-    }else{
-        NSLog(@"wxq 接收到心跳包 delegate = %@", self.delegate);
-    }
+    NSLog(@"wxq 接收到数据包");
+    [self handleData:data];
     [self.connectSocket readDataWithTimeout:-1 tag:-1];
 }
 
@@ -139,8 +167,8 @@
 {
     NSLog(@"wxq %@丢失连接 error=%@", self.connectSocket, err);
     self.connectSocket = nil;
-    if (self.delegate && [self.delegate respondsToSelector:@selector(appLostConnection)]) {
-        [self.delegate appLostConnection];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(socket:didLostConnection:)]) {
+        [self.delegate socket:self didLostConnection:err];
     }
 }
 

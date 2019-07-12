@@ -46,12 +46,30 @@ typedef struct tagNetPacket
     unsigned char *body;      //包体
 } NetPacket;
 
+//命令类运行结束后回调
+typedef void(^CommandRunComplete)(BOOL succ, NSData* data);
+
 @protocol LSSocketDelegate <NSObject>
 
--(void)socket:(id)sock didReadData:(NSData*)data tag:(long)tag;
-
+//新的socket连接到当前服务器
 @optional
--(void)appLostConnection;
+-(void)socketDidConnect:(id)sock;
+
+//接收到普通数据包
+@optional
+-(void)socket:(id)sock didReceiveNormalData:(NSData*)data;
+
+//接收到命令包
+@optional
+-(void)socket:(id)sock didReceiveCommand:(NSData*)data;
+
+//接收到反馈包
+@optional
+-(void)socket:(id)sock didReceiveResponse:(NSData*)data;
+
+//socket丢失联结
+@optional
+-(void)socket:(id)sock didLostConnection:(NSError*)error;
 
 @end
 

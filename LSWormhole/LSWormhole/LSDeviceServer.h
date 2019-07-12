@@ -18,6 +18,6 @@
 //开启服务
 -(void)startServer;
 
--(void)sendData:(NSData*)data tag:(long)tag;
+-(void)sendData:(NSData*)data;
 
 @end
