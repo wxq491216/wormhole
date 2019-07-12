@@ -79,6 +79,16 @@
     return succ;
 }
 
+-(void)reconnectServer
+{
+    [self.socket setDelegate:nil];
+    [self.socket disconnect];
+    
+    [self.socket setDelegate:self];
+    NSError* error = nil;
+    [self.socket connectToHost:@"localhost" onPort:LOCAL_SERVER_PORT error:&error];
+}
+
 -(void)disconnectSever
 {
     if (self.socket) {
@@ -128,11 +138,20 @@
         struct tagNetPacketHead header;
         [self.buffer getBytes:&header range:NSMakeRange(0, PacketHeadSize)];
         
+        NSUInteger version = header.version;
         NSUInteger lenght = [data length];
         NSUInteger bodyLength = header.nLen;
         NSUInteger left = lenght - PacketHeadSize;
         NSUInteger start = 0;
         NSLog(@"wxq left = %lu type = %d length = %lu", left, header.type, bodyLength);
+        
+        //版本异常，说明buffer接收到的数据异常，将buffer清空后重连
+        if (version > 10 || version <= 0) {
+            [self.buffer setLength:0];
+            exit(0);
+            return;
+        }
+        
         while (left >= bodyLength) {
             start += PacketHeadSize;
             NSData* subData = [[self.buffer subdataWithRange:NSMakeRange(start, bodyLength)] copy];
@@ -143,6 +162,7 @@
             });
             start += bodyLength;
             left = lenght - start;
+            NSLog(@"wxq left = %d start = %d", left, start);
             if (left <= PacketHeadSize) {
                 break;
             }
@@ -160,7 +180,7 @@
     NSLog(@"wxq socket connected server %@:%d", host, port);
     if (self.heartTimer == nil) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.heartTimer = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(heartbeatPackage:) userInfo:nil repeats:YES];
+            self.heartTimer = [NSTimer scheduledTimerWithTimeInterval:30.0f target:self selector:@selector(heartbeatPackage:) userInfo:nil repeats:YES];
         });
     }
     //读数据

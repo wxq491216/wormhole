@@ -18,6 +18,8 @@
 @property(nonatomic, strong)NSMutableDictionary* info;
 @property(nonatomic, strong)NSArray* params;
 
+@property(nonatomic, strong)NSString* jobId;
+
 @end
 
 @implementation LSDoTaskCommand
@@ -31,6 +33,8 @@
             self.info = [NSMutableDictionary dictionaryWithDictionary:dictionary];
             self.taskName = [dictionary valueForKey:@"name"];
             self.params = [dictionary valueForKey:@"params"];
+            self.jobId = [dictionary valueForKey:@"httpCnswhid"];
+            NSLog(@"wxq 创建jobid为%@的任务成功", self.jobId);
         }else{
             NSLog(@"wxq 创建任务失败，JSON数据格式错误");
         }
